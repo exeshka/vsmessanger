@@ -36,7 +36,11 @@ export class UserService {
     }
 
     async checkUsernameExists(username: string): Promise<boolean> {
-        const user = await this.prisma.user.findUnique({
+        if (!username) {
+            return false;
+        }
+
+        const user = await this.prisma.user.findFirst({
             where: {
                 username: username
             }
