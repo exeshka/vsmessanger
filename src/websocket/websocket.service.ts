@@ -1034,15 +1034,53 @@ export class WebsocketService {
     async sendToChat(senderId: string, chatId: string, message: ServerMessage) {
         try {
             // Проверяем, существует ли чат и имеет ли пользователь к нему доступ
-            const chat = await this.prisma.chat.findUnique({
+            let chat = await this.prisma.chat.findUnique({
                 where: { id: chatId },
                 include: {
                     members: true
                 }
             });
 
+            // Если чат не существует, создаем его
             if (!chat) {
-                throw new Error('Chat not found');
+                // Извлекаем ID второго участника из chatId (предполагая формат: userId1-userId2)
+                const [id1, id2] = chatId.split('-');
+                if (!id1 || !id2) {
+                    throw new Error('Invalid chat ID format');
+                }
+
+                // Сортируем ID пользователей, чтобы меньший был первым
+                const [smallerId, largerId] = [id1, id2].sort();
+                const sortedChatId = `${smallerId}-${largerId}`;
+
+                // Проверяем, не существует ли уже чат с отсортированным ID
+                if (sortedChatId !== chatId) {
+                    chat = await this.prisma.chat.findUnique({
+                        where: { id: sortedChatId },
+                        include: {
+                            members: true
+                        }
+                    });
+                }
+
+                // Если чат все еще не существует, создаем новый
+                if (!chat) {
+                    chat = await this.prisma.chat.create({
+                        data: {
+                            id: sortedChatId,
+                            type: ChatType.DIRECT,
+                            members: {
+                                connect: [
+                                    { id: id1 },
+                                    { id: id2 }
+                                ]
+                            }
+                        },
+                        include: {
+                            members: true
+                        }
+                    });
+                }
             }
 
             // Проверяем, является ли отправитель участником чата
