@@ -13,6 +13,8 @@ export interface UserInfo {
     chats?: ChatWithMessages[];
     createdAt: Date;
     updatedAt: Date;
+    is_online: boolean;
+    last_online: Date;
     images: UserImage[];
 }
 
@@ -84,7 +86,15 @@ export type MessageState = 'loading' | 'success' | 'error';
 export type ServiceMessageType = 'system' | 'error' | 'invalid_recipient_id' | 'chats_list' | 'users_list';
 
 // Базовые типы для всех сообщений
-export type BaseMessageType = 'send_message' | 'get_chats' | 'get_users' | 'get_messages' | 'update_messages_status';
+export type BaseMessageType =
+    | 'send_message'
+    | 'get_chats'
+    | 'get_users'
+    | 'get_messages'
+    | 'update_messages_status'
+    | 'search_event'
+    | 'get_user'
+    | 'get_chat_detail';
 
 export type MessageType =
     | BaseMessageType
@@ -246,8 +256,24 @@ export interface MessagesListContent {
 }
 
 export interface ExtendedMessageContent extends MessageContent {
+    to?: string;
     chat_id?: string;
     page?: number;
     limit?: number;
     message_ids?: string[];
+    query?: string;
+    user_id?: string;
+}
+
+export interface SearchEventContent extends MessageContent {
+    query: string;
+}
+
+export interface SearchEventResponse {
+    users: UserInfo[];
+}
+
+export interface ChatDetailResponse {
+    id: string;
+    user: UserInfo;
 }

@@ -23,7 +23,9 @@ import {
     ChatListItem,
     StateResponse,
     MessagesListContent,
-    MessageStatus
+    MessageStatus,
+    SearchEventResponse,
+    ChatDetailResponse
 } from './interfaces/socket-message.interface';
 import { v4 as uuidv4 } from 'uuid';
 import { PrismaService } from '../prisma/prisma.service';
@@ -52,6 +54,9 @@ export class WebsocketService {
         this.connections.get(userId)?.push(newConnection);
         this.clients.set(userId, ws);
 
+        // Обновляем статус онлайн
+        await this.updateUserOnlineStatus(userId);
+
         // Логируем текущие подключения
         console.log('Active connections:', {
             totalUsers: this.connections.size,
@@ -71,6 +76,8 @@ export class WebsocketService {
             if (filteredConnections.length === 0) {
                 this.connections.delete(userId);
                 this.clients.delete(userId);
+                // Обновляем статус оффлайн только если у пользователя не осталось активных соединений
+                this.updateUserOfflineStatus(userId);
             } else {
                 this.connections.set(userId, filteredConnections);
             }
@@ -186,6 +193,8 @@ export class WebsocketService {
                 username: message.sender.username,
                 createdAt: message.sender.createdAt,
                 updatedAt: message.sender.updatedAt,
+                is_online: message.sender.is_online || false,
+                last_online: message.sender.last_online || message.sender.updatedAt,
                 images: message.sender.images
             },
             timestamp: message.createdAt.toISOString()
@@ -215,6 +224,8 @@ export class WebsocketService {
             username: 'System',
             createdAt: new Date(),
             updatedAt: new Date(),
+            is_online: true,
+            last_online: new Date(),
             images: []
         };
 
@@ -253,6 +264,8 @@ export class WebsocketService {
                 username: true,
                 createdAt: true,
                 updatedAt: true,
+                is_online: true,
+                last_online: true,
                 images: true
             }
         });
@@ -559,6 +572,8 @@ export class WebsocketService {
                                 username: true,
                                 createdAt: true,
                                 updatedAt: true,
+                                is_online: true,
+                                last_online: true,
                                 images: true
                             }
                         },
@@ -579,6 +594,8 @@ export class WebsocketService {
                                         username: true,
                                         createdAt: true,
                                         updatedAt: true,
+                                        is_online: true,
+                                        last_online: true,
                                         images: true
                                     }
                                 }
@@ -602,6 +619,8 @@ export class WebsocketService {
                     username: member.username,
                     createdAt: member.createdAt,
                     updatedAt: member.updatedAt,
+                    is_online: member.is_online,
+                    last_online: member.last_online,
                     images: member.images
                 })),
                 messages: chat.messages.map(msg => ({
@@ -615,6 +634,8 @@ export class WebsocketService {
                         username: msg.sender.username,
                         createdAt: msg.sender.createdAt,
                         updatedAt: msg.sender.updatedAt,
+                        is_online: msg.sender.is_online,
+                        last_online: msg.sender.last_online,
                         images: msg.sender.images
                     }
                 })),
@@ -636,6 +657,8 @@ export class WebsocketService {
                 username: true,
                 createdAt: true,
                 updatedAt: true,
+                is_online: true,
+                last_online: true,
                 images: true
             }
         });
@@ -704,6 +727,8 @@ export class WebsocketService {
                 username: message.sender.username,
                 createdAt: message.sender.createdAt,
                 updatedAt: message.sender.updatedAt,
+                is_online: message.sender.is_online || false,
+                last_online: message.sender.last_online || message.sender.updatedAt,
                 images: message.sender.images
             },
             timestamp: message.createdAt.toISOString()
@@ -848,8 +873,27 @@ export class WebsocketService {
                 }
             });
 
+            // Если чат не найден, отправляем пустой список
             if (!chat) {
-                throw new Error('Chat not found or access denied');
+                const emptyResponse: ServerResponse<MessagesListContent> = {
+                    type: 'get_messages_success',
+                    content: {
+                        messages: [],
+                        pagination: {
+                            total: 0,
+                            page: page,
+                            limit: limit,
+                            hasMore: false
+                        }
+                    }
+                };
+
+                connections.forEach(({ ws }) => {
+                    if (ws.readyState === WebSocket.OPEN) {
+                        ws.send(JSON.stringify(emptyResponse));
+                    }
+                });
+                return;
             }
 
             // Получаем общее количество сообщений в чате
@@ -911,18 +955,23 @@ export class WebsocketService {
         } catch (error) {
             console.error('Error getting chat messages:', error);
 
-            // Отправляем сообщение об ошибке
-            const errorMessage: StateResponse<'get_messages'> = {
-                type: 'get_messages_error',
+            // В случае любой ошибки также отправляем пустой список
+            const emptyResponse: ServerResponse<MessagesListContent> = {
+                type: 'get_messages_success',
                 content: {
-                    requestId,
-                    message: error.message || 'Failed to get messages'
+                    messages: [],
+                    pagination: {
+                        total: 0,
+                        page: page,
+                        limit: limit,
+                        hasMore: false
+                    }
                 }
             };
 
             connections.forEach(({ ws }) => {
                 if (ws.readyState === WebSocket.OPEN) {
-                    ws.send(JSON.stringify(errorMessage));
+                    ws.send(JSON.stringify(emptyResponse));
                 }
             });
         }
@@ -1126,6 +1175,308 @@ export class WebsocketService {
         } catch (error) {
             console.error('Error sending message to chat:', error);
             throw error;
+        }
+    }
+
+    async searchByNickname(userId: string, query: string) {
+        const requestId = uuidv4();
+        const connections = this.getConnections(userId);
+
+        // Отправляем состояние загрузки
+        const loadingMessage: StateResponse<'search_event'> = {
+            type: 'search_event_loading',
+            content: { requestId }
+        };
+
+        connections.forEach(({ ws }) => {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify(loadingMessage));
+            }
+        });
+
+        try {
+            // Ищем пользователей по частичному совпадению никнейма
+            const users = await this.prisma.user.findMany({
+                where: {
+                    username: {
+                        contains: query
+                    }
+                },
+                select: {
+                    id: true,
+                    username: true,
+                    createdAt: true,
+                    updatedAt: true,
+                    is_online: true,
+                    last_online: true,
+                    images: true
+                }
+            });
+
+            // Отправляем успешный результат
+            const successMessage: ServerResponse<SearchEventResponse> = {
+                type: 'search_event_success',
+                content: { users }
+            };
+
+            connections.forEach(({ ws }) => {
+                if (ws.readyState === WebSocket.OPEN) {
+                    ws.send(JSON.stringify(successMessage));
+                }
+            });
+
+            return users;
+        } catch (error) {
+            console.error('Error searching users:', error);
+
+            // Отправляем сообщение об ошибке
+            const errorMessage: StateResponse<'search_event'> = {
+                type: 'search_event_error',
+                content: {
+                    requestId,
+                    message: 'Failed to search users'
+                }
+            };
+
+            connections.forEach(({ ws }) => {
+                if (ws.readyState === WebSocket.OPEN) {
+                    ws.send(JSON.stringify(errorMessage));
+                }
+            });
+
+            throw error;
+        }
+    }
+
+    async sendUserInfo(requesterId: string, targetUserId: string) {
+        const requestId = uuidv4();
+        const connections = this.getConnections(requesterId);
+
+        // Отправляем состояние загрузки
+        const loadingMessage: StateResponse<'get_user'> = {
+            type: 'get_user_loading',
+            content: { requestId }
+        };
+
+        connections.forEach(({ ws }) => {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify(loadingMessage));
+            }
+        });
+
+        try {
+            const user = await this.prisma.user.findUnique({
+                where: { id: targetUserId },
+                select: {
+                    id: true,
+                    username: true,
+                    createdAt: true,
+                    updatedAt: true,
+                    is_online: true,
+                    last_online: true,
+                    images: true
+                }
+            });
+
+            if (!user) {
+                throw new Error('User not found');
+            }
+
+            // Отправляем успешный результат
+            const successMessage: ServerResponse<{ user: UserInfo }> = {
+                type: 'get_user_success',
+                content: { user }
+            };
+
+            connections.forEach(({ ws }) => {
+                if (ws.readyState === WebSocket.OPEN) {
+                    ws.send(JSON.stringify(successMessage));
+                }
+            });
+
+            return user;
+        } catch (error) {
+            console.error('Error getting user info:', error);
+
+            // Отправляем сообщение об ошибке
+            const errorMessage: StateResponse<'get_user'> = {
+                type: 'get_user_error',
+                content: {
+                    requestId,
+                    message: error.message || 'Failed to get user info'
+                }
+            };
+
+            connections.forEach(({ ws }) => {
+                if (ws.readyState === WebSocket.OPEN) {
+                    ws.send(JSON.stringify(errorMessage));
+                }
+            });
+
+            throw error;
+        }
+    }
+
+    async getChatDetail(userId: string, chatId: string) {
+        const requestId = uuidv4();
+        const connections = this.getConnections(userId);
+
+        // Отправляем состояние загрузки
+        const loadingMessage: StateResponse<'get_chat_detail'> = {
+            type: 'get_chat_detail_loading',
+            content: { requestId }
+        };
+
+        connections.forEach(({ ws }) => {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify(loadingMessage));
+            }
+        });
+
+        try {
+            // Проверяем формат chatId
+            if (!chatId.includes('-')) {
+                throw new Error('Invalid chat ID format');
+            }
+
+            // Разбиваем chatId на ID пользователей
+            const [id1, id2] = chatId.split('-');
+            if (!id1 || !id2) {
+                throw new Error('Invalid chat ID format');
+            }
+
+            // Находим ID другого пользователя
+            const otherUserId = id1 === userId ? id2 : id1;
+
+            // Проверяем существование другого пользователя
+            const otherUser = await this.prisma.user.findUnique({
+                where: { id: otherUserId },
+                select: {
+                    id: true,
+                    username: true,
+                    createdAt: true,
+                    updatedAt: true,
+                    is_online: true,
+                    last_online: true,
+                    images: true
+                }
+            });
+
+            if (!otherUser) {
+                throw new Error('User not found');
+            }
+
+            // Проверяем существование чата
+            const chat = await this.prisma.chat.findFirst({
+                where: {
+                    id: chatId,
+                    members: {
+                        some: {
+                            id: userId
+                        }
+                    }
+                }
+            });
+
+            // Отправляем успешный результат
+            const successMessage: ServerResponse<ChatDetailResponse> = {
+                type: 'get_chat_detail_success',
+                content: {
+                    id: chatId,
+                    user: otherUser
+                }
+            };
+
+            connections.forEach(({ ws }) => {
+                if (ws.readyState === WebSocket.OPEN) {
+                    ws.send(JSON.stringify(successMessage));
+                }
+            });
+
+            return { id: chatId, user: otherUser };
+        } catch (error) {
+            console.error('Error getting chat detail:', error);
+
+            // Отправляем сообщение об ошибке
+            const errorMessage: StateResponse<'get_chat_detail'> = {
+                type: 'get_chat_detail_error',
+                content: {
+                    requestId,
+                    message: error.message || 'Failed to get chat detail'
+                }
+            };
+
+            connections.forEach(({ ws }) => {
+                if (ws.readyState === WebSocket.OPEN) {
+                    ws.send(JSON.stringify(errorMessage));
+                }
+            });
+
+            throw error;
+        }
+    }
+
+    private async updateUserOnlineStatus(userId: string): Promise<void> {
+        try {
+            await this.prisma.user.update({
+                where: { id: userId },
+                data: {
+                    is_online: true,
+                    last_online: new Date()
+                }
+            });
+
+            // Оповещаем всех пользователей об изменении статуса
+            const updatedUser = await this.getUserInfo(userId);
+            if (updatedUser) {
+                const statusUpdate: ServerResponse<{ user: UserInfo }> = {
+                    type: 'user_status_updated',
+                    content: { user: updatedUser }
+                };
+
+                // Отправляем обновление всем подключенным пользователям
+                this.connections.forEach((connections) => {
+                    connections.forEach(({ ws }) => {
+                        if (ws.readyState === WebSocket.OPEN) {
+                            ws.send(JSON.stringify(statusUpdate));
+                        }
+                    });
+                });
+            }
+        } catch (error) {
+            console.error('Error updating user online status:', error);
+        }
+    }
+
+    private async updateUserOfflineStatus(userId: string): Promise<void> {
+        try {
+            await this.prisma.user.update({
+                where: { id: userId },
+                data: {
+                    is_online: false,
+                    last_online: new Date()
+                }
+            });
+
+            // Оповещаем всех пользователей об изменении статуса
+            const updatedUser = await this.getUserInfo(userId);
+            if (updatedUser) {
+                const statusUpdate: ServerResponse<{ user: UserInfo }> = {
+                    type: 'user_status_updated',
+                    content: { user: updatedUser }
+                };
+
+                // Отправляем обновление всем подключенным пользователям
+                this.connections.forEach((connections) => {
+                    connections.forEach(({ ws }) => {
+                        if (ws.readyState === WebSocket.OPEN) {
+                            ws.send(JSON.stringify(statusUpdate));
+                        }
+                    });
+                });
+            }
+        } catch (error) {
+            console.error('Error updating user offline status:', error);
         }
     }
 }

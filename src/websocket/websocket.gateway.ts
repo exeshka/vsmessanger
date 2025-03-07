@@ -7,7 +7,8 @@ import {
     MessageContentType,
     ImageMessageContent,
     ServerMessage,
-    MessageContent
+    MessageContent,
+    SearchEventContent
 } from './interfaces/socket-message.interface';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
@@ -20,9 +21,11 @@ interface ExtendedMessageContent extends MessageContent {
     page?: number;
     limit?: number;
     message_ids?: string[];
+    query?: string;
 }
 
-interface ExtendedSocketMessage extends Omit<SocketMessage, 'content'> {
+interface ExtendedSocketMessage {
+    type: MessageType;
     id?: string;
     to?: string;
     content: ExtendedMessageContent;
@@ -132,7 +135,7 @@ export class WebsocketGateway implements OnModuleInit, OnModuleDestroy {
         try {
             console.log('Received message:', data.toString());
 
-            let message: ExtendedSocketMessage;
+            let message: SocketMessage;
             try {
                 message = JSON.parse(data.toString());
             } catch (parseError) {
@@ -160,18 +163,42 @@ export class WebsocketGateway implements OnModuleInit, OnModuleDestroy {
                     await this.websocketService.sendUsersList(userId);
                     break;
 
+                case 'get_chat_detail':
+                    const chatDetailContent = message as unknown as { content: { chat_id: string } };
+                    if (!chatDetailContent.content.chat_id) {
+                        this.sendError(ws, 'Chat ID is required');
+                        return;
+                    }
+                    await this.websocketService.getChatDetail(userId, chatDetailContent.content.chat_id);
+                    break;
+
+                case 'get_user':
+                    const getUserContent = message as unknown as { content: { user_id: string } };
+                    if (!getUserContent.content.user_id) {
+                        this.sendError(ws, 'User ID is required');
+                        return;
+                    }
+                    await this.websocketService.sendUserInfo(userId, getUserContent.content.user_id);
+                    break;
+
                 case 'send_message':
+                    const extendedMessage = message as unknown as ExtendedSocketMessage;
+                    if (!extendedMessage.content.chat_id || !extendedMessage.content.text) {
+                        this.sendError(ws, 'Chat ID and message text are required');
+                        return;
+                    }
                     await this.handleSendMessage(ws, message, userId);
                     break;
 
                 case 'get_messages':
-                    if (!message.content || !message.content.chat_id) {
+                    const getMsgContent = (message as unknown as ExtendedSocketMessage).content;
+                    if (!getMsgContent.chat_id) {
                         this.sendError(ws, 'Chat ID is required');
                         return;
                     }
-                    const chatId = message.content.chat_id;
-                    const page = message.content.page ? parseInt(String(message.content.page), 10) : 1;
-                    const limit = message.content.limit ? parseInt(String(message.content.limit), 10) : 30;
+                    const chatId = getMsgContent.chat_id;
+                    const page = getMsgContent.page || 1;
+                    const limit = getMsgContent.limit || 30;
 
                     // Проверяем валидность параметров пагинации
                     if (page < 1 || limit < 1 || limit > 100) {
@@ -183,12 +210,13 @@ export class WebsocketGateway implements OnModuleInit, OnModuleDestroy {
                     break;
 
                 case 'update_messages_status':
-                    if (!message.content || !message.content.chat_id || !message.content.message_ids) {
+                    const updateContent = (message as unknown as ExtendedSocketMessage).content;
+                    if (!updateContent.chat_id || !updateContent.message_ids) {
                         this.sendError(ws, 'Chat ID and message IDs are required');
                         return;
                     }
-                    const updateChatId = message.content.chat_id;
-                    const messageIds = message.content.message_ids;
+                    const updateChatId = updateContent.chat_id;
+                    const messageIds = updateContent.message_ids;
 
                     if (messageIds.length === 0) {
                         this.sendError(ws, 'No valid message IDs provided');
@@ -196,6 +224,15 @@ export class WebsocketGateway implements OnModuleInit, OnModuleDestroy {
                     }
 
                     await this.websocketService.updateMessagesStatus(updateChatId, userId, messageIds);
+                    break;
+
+                case 'search_event':
+                    const searchContent = (message as unknown as ExtendedSocketMessage).content;
+                    if (!searchContent.query) {
+                        this.sendError(ws, 'Search query is required');
+                        return;
+                    }
+                    await this.websocketService.searchByNickname(userId, searchContent.query);
                     break;
 
                 default:
@@ -209,20 +246,21 @@ export class WebsocketGateway implements OnModuleInit, OnModuleDestroy {
         }
     }
 
-    private async handleSendMessage(ws: WebSocket, message: ExtendedSocketMessage, userId: string) {
+    private async handleSendMessage(ws: WebSocket, message: SocketMessage, userId: string) {
         console.log('Handling send message:', { message, userId });
 
-        if (!message.content || !message.content.chat_id) {
+        const extendedMessage = message as unknown as ExtendedSocketMessage;
+        if (!extendedMessage.content.chat_id) {
             console.error('Missing chat ID:', message);
             this.sendError(ws, 'Chat ID is required');
             return;
         }
 
         try {
-            const chatId = message.content.chat_id;
+            const chatId = extendedMessage.content.chat_id;
             console.log('Sending to chat:', { fromUserId: userId, chatId });
 
-            if (!message.content.text) {
+            if (!extendedMessage.content.text) {
                 console.error('Missing message content:', message);
                 throw new Error('Message content is required');
             }
@@ -230,8 +268,8 @@ export class WebsocketGateway implements OnModuleInit, OnModuleDestroy {
             const serverMessage: ServerMessage = {
                 type: message.type,
                 content: {
-                    text: message.content.text,
-                    type: message.content.type
+                    text: extendedMessage.content.text,
+                    type: extendedMessage.content.type
                 }
             };
             console.log('Prepared server message:', serverMessage);

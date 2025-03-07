@@ -19,14 +19,16 @@ enum MessageStatus {
 }
 
 model User {
-  id        String    @id @default(cuid())
-  username  String    @unique
-  password  String
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  images    Image[]
-  chats     Chat[]    @relation("ChatMembers") // Чаты пользователя
-  Message   Message[]
+  id          String    @id @default(cuid())
+  username    String    @unique
+  password    String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  is_online   Boolean   @default(false)
+  last_online DateTime  @default(now())
+  images      Image[]
+  chats       Chat[]    @relation("ChatMembers") // Чаты пользователя
+  Message     Message[]
 }
 
 model Image {
