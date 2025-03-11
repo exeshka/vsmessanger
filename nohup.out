@@ -1,0 +1,4391 @@
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +22ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebsocketModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+Static files path: /root/vsmessanger/uploads
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +23ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/user}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/check, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/upload-image, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/me, GET} route[39m[38;5;3m +0ms[39m
+WebSocket server started on ws://localhost:8080/ws
+[32m[Nest] 31121  - [39m03/06/2025, 6:47:43 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +63ms[39m
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+→ GET /api/user/me 200 5ms from ::ffff:2.134.108.226
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +24ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebsocketModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+Static files path: /root/vsmessanger/uploads
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +28ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/user}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/check, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/upload-image, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/me, GET} route[39m[38;5;3m +0ms[39m
+WebSocket server started on ws://localhost:8080/ws
+[32m[Nest] 31855  - [39m03/06/2025, 6:51:07 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +67ms[39m
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"Привет","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: 'Привет',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Привет', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wznerx0000rzkvftp75mgh',
+  text: 'Привет',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-05T18:48:39.256Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-06T06:51:22.893Z'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"Чд","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: 'Чд',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Чд', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzocxl0001rzkvi49axx74',
+  text: 'Чд',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-05T18:48:39.256Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-06T06:52:07.162Z'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "Але гей",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'Але гей',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Але гей', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzrxea0002rzkv24kuzm5i',
+  text: 'Але гей',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:54:53.650Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsg9b0003rzkv921k92fj',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:18.095Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsjba0004rzkv32ozyvk8',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:22.055Z'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsmp00005rzkvwr2nrw0r',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:26.437Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsnpz0006rzkvebpqw42r',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:27.768Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsows0007rzkvu06z49fj',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:29.309Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsq210008rzkvjd3vupcl',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:30.793Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsr4s0009rzkv88ubk412',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:32.189Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsrcu000arzkvi0b9cnhl',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:32.478Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsri0000brzkvjp9otg2y',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:32.664Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsweh000crzkvyfg2fz3y',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:39.017Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzsy5j000drzkvv5xukpln',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:41.288Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzszzg000erzkvbd5n1sxc',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:43.661Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzt0xk000frzkvtvumm385',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:44.889Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzt1tu000grzkv9cnjzcni',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:46.050Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzt2rd000hrzkvxt5hikyc',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:47.258Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzt3qz000irzkvo6wg9xnd',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:55:48.540Z'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"Кайф","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: 'Кайф',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Кайф', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wztydo000jrzkv321lie5s',
+  text: 'Кайф',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-05T18:48:39.256Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-06T06:56:28.236Z'
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzudk4000krzkvnnp9eq9v',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T06:56:47.908Z'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"А мне пох","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: 'А мне пох',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Prepared server message: { type: 'send_message', content: { text: 'А мне пох', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7wzvx4m000lrzkv2xrhaqq3',
+  text: 'А мне пох',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-05T18:48:39.256Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-06T06:57:59.926Z'
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+→ GET /api/user/me 200 8ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 2, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {
+    "type": "send_message",
+    "content": {
+        "chat_id": "cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx",
+        "text": "я тебе говорю",
+        "type": "TEXT"
+    }
+}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx',
+      text: 'я тебе говорю',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w79afq0000lwbwsn0j9vdx'
+}
+Sending to chat: {
+  fromUserId: 'cm7w79afq0000lwbwsn0j9vdx',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7w79afq0000lwbwsn0j9vdx'
+}
+Prepared server message: {
+  type: 'send_message',
+  content: { text: 'я тебе говорю', type: 'TEXT' }
+}
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7x14edy000mrzkvx83dke9f',
+  text: 'я тебе говорю',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w79afq0000lwbwsn0j9vdx',
+    username: 'exeshka',
+    createdAt: 2025-03-05T17:36:34.838Z,
+    updatedAt: 2025-03-05T17:36:34.838Z,
+    images: []
+  },
+  timestamp: '2025-03-06T07:32:35.158Z'
+}
+Remaining connections after disconnect: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+→ GET /api/user/me 200 3ms from ::ffff:181.214.53.54
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+→ POST /api/auth/register 201 127ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 2 }
+}
+Received message: 
+Failed to parse message: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:137:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Raw message: 
+Received message: 
+Failed to parse message: SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:137:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Raw message: 
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+→ POST /api/auth/register 201 167ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7xlvwkr000orzkvcvmxudgp' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7xlvwkr000orzkvcvmxudgp: 1 }
+}
+→ POST /api/auth/register 201 172ms from ::ffff:2.134.108.226
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:113:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:88:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+→ GET /api/user/me 200 4ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+→ GET /api/user/me 200 2ms from ::ffff:2.134.108.226
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"Хуй","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: 'Хуй',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Хуй', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7ydof5z000qrzkv7ojystfl',
+  text: 'Хуй',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-05T18:48:39.256Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-07T06:11:50.856Z'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"Хуй","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: 'Хуй',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Хуй', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7ydogk7000rrzkvif1q5y1k',
+  text: 'Хуй',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-05T18:48:39.256Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-07T06:11:52.664Z'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"Хуй","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: 'Хуй',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Хуй', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7ydoi25000srzkvkubcinju',
+  text: 'Хуй',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-05T18:48:39.256Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-07T06:11:54.605Z'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"Хуй","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: 'Хуй',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Хуй', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7ydoib9000trzkvracmbqjw',
+  text: 'Хуй',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-05T18:48:39.256Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-07T06:11:54.934Z'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"Хуй","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: 'Хуй',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Хуй', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+  message_id: 'cm7ydoigu000urzkvdckmp5r9',
+  text: 'Хуй',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-05T18:48:39.256Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-07T06:11:55.134Z'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+[96msrc/websocket/websocket.service.ts[0m:[93m267[0m:[93m17[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'is_online' does not exist in type 'UserSelect<DefaultArgs>'.
+
+[7m267[0m                 is_online: true,
+[7m   [0m [91m                ~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1929[0m:[93m5[0m
+    [7m1929[0m     select?: UserSelect<ExtArgs> | null
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'select' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; where: UserWhereUniqueInput; }'
+[96msrc/websocket/websocket.service.ts[0m:[93m273[0m:[93m9[0m - [91merror[0m[90m TS2739: [0mType '{ id: string; createdAt: Date; updatedAt: Date; username: string; password: string; }' is missing the following properties from type 'UserInfo': is_online, last_online, images
+
+[7m273[0m         return user;
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/websocket/websocket.service.ts[0m:[93m575[0m:[93m33[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'is_online' does not exist in type 'UserSelect<DefaultArgs>'.
+
+[7m575[0m                                 is_online: true,
+[7m   [0m [91m                                ~~~~~~~~~[0m
+[96msrc/websocket/websocket.service.ts[0m:[93m597[0m:[93m41[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'is_online' does not exist in type 'UserSelect<DefaultArgs>'.
+
+[7m597[0m                                         is_online: true,
+[7m   [0m [91m                                        ~~~~~~~~~[0m
+[96msrc/websocket/websocket.service.ts[0m:[93m613[0m:[93m21[0m - [91merror[0m[90m TS2339: [0mProperty 'chats' does not exist on type '{ id: string; createdAt: Date; updatedAt: Date; username: string; password: string; }'.
+
+[7m613[0m         return user.chats
+[7m   [0m [91m                    ~~~~~[0m
+[96msrc/websocket/websocket.service.ts[0m:[93m654[0m:[93m9[0m - [91merror[0m[90m TS2322: [0mType '{ id: string; createdAt: Date; updatedAt: Date; username: string; password: string; }[]' is not assignable to type 'UserInfo[]'.
+  Type '{ id: string; createdAt: Date; updatedAt: Date; username: string; password: string; }' is missing the following properties from type 'UserInfo': is_online, last_online, images
+
+[7m654[0m         return await this.prisma.user.findMany({
+[7m   [0m [91m        ~~~~~~[0m
+[96msrc/websocket/websocket.service.ts[0m:[93m660[0m:[93m17[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'is_online' does not exist in type 'UserSelect<DefaultArgs>'.
+
+[7m660[0m                 is_online: true,
+[7m   [0m [91m                ~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m2077[0m:[93m5[0m
+    [7m2077[0m     select?: UserSelect<ExtArgs> | null
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'select' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; ... 5 more ...; distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]; }'
+[96msrc/websocket/websocket.service.ts[0m:[93m1210[0m:[93m21[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'is_online' does not exist in type 'UserSelect<DefaultArgs>'.
+
+[7m1210[0m                     is_online: true,
+[7m    [0m [91m                    ~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m2077[0m:[93m5[0m
+    [7m2077[0m     select?: UserSelect<ExtArgs> | null
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'select' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; ... 5 more ...; distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]; }'
+[96msrc/websocket/websocket.service.ts[0m:[93m1219[0m:[93m28[0m - [91merror[0m[90m TS2322: [0mType '{ id: string; createdAt: Date; updatedAt: Date; username: string; password: string; }[]' is not assignable to type 'UserInfo[]'.
+  Type '{ id: string; createdAt: Date; updatedAt: Date; username: string; password: string; }' is missing the following properties from type 'UserInfo': is_online, last_online, images
+
+[7m1219[0m                 content: { users }
+[7m    [0m [91m                           ~~~~~[0m
+
+  [96msrc/websocket/interfaces/socket-message.interface.ts[0m:[93m273[0m:[93m5[0m
+    [7m273[0m     users: UserInfo[];
+    [7m   [0m [96m    ~~~~~[0m
+    The expected type comes from property 'users' which is declared here on type 'SearchEventResponse'
+[96msrc/websocket/websocket.service.ts[0m:[93m1275[0m:[93m21[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'is_online' does not exist in type 'UserSelect<DefaultArgs>'.
+
+[7m1275[0m                     is_online: true,
+[7m    [0m [91m                    ~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1929[0m:[93m5[0m
+    [7m1929[0m     select?: UserSelect<ExtArgs> | null
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'select' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; where: UserWhereUniqueInput; }'
+[96msrc/websocket/websocket.service.ts[0m:[93m1288[0m:[93m28[0m - [91merror[0m[90m TS2739: [0mType '{ id: string; createdAt: Date; updatedAt: Date; username: string; password: string; }' is missing the following properties from type 'UserInfo': is_online, last_online, images
+
+[7m1288[0m                 content: { user }
+[7m    [0m [91m                           ~~~~[0m
+
+  [96msrc/websocket/websocket.service.ts[0m:[93m1286[0m:[93m52[0m
+    [7m1286[0m             const successMessage: ServerResponse<{ user: UserInfo }> = {
+    [7m    [0m [96m                                                   ~~~~[0m
+    The expected type comes from property 'user' which is declared here on type '{ user: UserInfo; }'
+[96msrc/websocket/websocket.service.ts[0m:[93m1359[0m:[93m21[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'is_online' does not exist in type 'UserSelect<DefaultArgs>'.
+
+[7m1359[0m                     is_online: true,
+[7m    [0m [91m                    ~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m1929[0m:[93m5[0m
+    [7m1929[0m     select?: UserSelect<ExtArgs> | null
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'select' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; where: UserWhereUniqueInput; }'
+[96msrc/websocket/websocket.service.ts[0m:[93m1386[0m:[93m21[0m - [91merror[0m[90m TS2739: [0mType '{ id: string; createdAt: Date; updatedAt: Date; username: string; password: string; }' is missing the following properties from type 'UserInfo': is_online, last_online, images
+
+[7m1386[0m                     user: otherUser
+[7m    [0m [91m                    ~~~~[0m
+
+  [96msrc/websocket/interfaces/socket-message.interface.ts[0m:[93m278[0m:[93m5[0m
+    [7m278[0m     user: UserInfo;
+    [7m   [0m [96m    ~~~~[0m
+    The expected type comes from property 'user' which is declared here on type 'ChatDetailResponse'
+[96msrc/websocket/websocket.service.ts[0m:[93m1424[0m:[93m21[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'is_online' does not exist in type '(Without<UserUpdateInput, UserUncheckedUpdateInput> & UserUncheckedUpdateInput) | (Without<...> & UserUpdateInput)'.
+
+[7m1424[0m                     is_online: true,
+[7m    [0m [91m                    ~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m2186[0m:[93m5[0m
+    [7m2186[0m     data: XOR<UserUpdateInput, UserUncheckedUpdateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedUpdateInput) | (Without<...> & UserUpdateInput); where: UserWhereUniqueInput; }'
+[96msrc/websocket/websocket.service.ts[0m:[93m1456[0m:[93m21[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'is_online' does not exist in type '(Without<UserUpdateInput, UserUncheckedUpdateInput> & UserUncheckedUpdateInput) | (Without<...> & UserUpdateInput)'.
+
+[7m1456[0m                     is_online: false,
+[7m    [0m [91m                    ~~~~~~~~~[0m
+
+  [96mnode_modules/.prisma/client/index.d.ts[0m:[93m2186[0m:[93m5[0m
+    [7m2186[0m     data: XOR<UserUpdateInput, UserUncheckedUpdateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: UserSelect<DefaultArgs>; omit?: UserOmit<DefaultArgs>; include?: UserInclude<DefaultArgs>; data: (Without<...> & UserUncheckedUpdateInput) | (Without<...> & UserUpdateInput); where: UserWhereUniqueInput; }'
+
+Found 15 error(s).
+
+→ POST /api/auth/register 201 120ms from ::ffff:176.64.9.61
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+→ GET /api/user/me 200 3ms from ::ffff:2.134.108.226
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"send_message","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","text":"","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+      text: '',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4'
+}
+Missing message content: {
+  type: 'send_message',
+  content: {
+    chat_id: 'cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4',
+    text: '',
+    type: 'TEXT'
+  }
+}
+Error sending message: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Stack trace: Error: Message content is required
+    at WebsocketGateway.handleSendMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:227:23)
+    at WebsocketGateway.handleMessage (/root/vsmessanger/src/websocket/websocket.gateway.ts:164:32)
+    at WebSocket.<anonymous> (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:51)
+    at WebSocket.emit (node:events:518:28)
+    at Receiver.receiverOnMessage (/root/vsmessanger/node_modules/ws/lib/websocket.js:1220:20)
+    at Receiver.emit (node:events:518:28)
+    at Receiver.dataMessage (/root/vsmessanger/node_modules/ws/lib/receiver.js:596:14)
+    at Receiver.getData (/root/vsmessanger/node_modules/ws/lib/receiver.js:496:10)
+    at Receiver.startLoop (/root/vsmessanger/node_modules/ws/lib/receiver.js:167:16)
+    at Receiver._write (/root/vsmessanger/node_modules/ws/lib/receiver.js:94:10)
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+→ GET /api/user/me 200 3ms from ::ffff:2.134.108.226
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+→ GET /api/user/check?nickname=Zettaisha 200 7ms from ::ffff:178.252.203.39
+→ POST /api/auth/register 201 153ms from ::ffff:178.252.203.39
+Received message: {"type":"search_event","content":{"query":"Z"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+→ GET /api/user/me 200 2ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"search_event","content":{"query":"E"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Z"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"z"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1 }
+}
+→ GET /api/user/me 200 3ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":0}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: get_chat_detail
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":0}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: get_chat_detail
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":0}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: get_chat_detail
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":0}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: get_chat_detail
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":1}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":2}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":3}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":4}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":5}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":6}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":7}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":8}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":9}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":10}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":11}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":12}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":13}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":14}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":15}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":16}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":17}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":18}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":19}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":20}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":21}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":22}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":23}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":24}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":25}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":26}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":27}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":28}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":29}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":30}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":31}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":32}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":33}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":34}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+→ GET /api/user/me 200 6ms from ::ffff:178.252.203.39
+Active connections: {
+  totalUsers: 3,
+  connectedUsers: [
+    'cm7xle1vr000nrzkv08juc6h6',
+    'cm7w9tz6f0000rzpazn6bx3g4',
+    'cm7ytnyhc000wrzkv3rcnfy5p'
+  ],
+  userConnections: {
+    cm7xle1vr000nrzkv08juc6h6: 1,
+    cm7w9tz6f0000rzpazn6bx3g4: 1,
+    cm7ytnyhc000wrzkv3rcnfy5p: 1
+  }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Remaining connections after disconnect: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7ytnyhc000wrzkv3rcnfy5p' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7ytnyhc000wrzkv3rcnfy5p: 1 }
+}
+→ GET /api/user/me 200 5ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 3,
+  connectedUsers: [
+    'cm7xle1vr000nrzkv08juc6h6',
+    'cm7ytnyhc000wrzkv3rcnfy5p',
+    'cm7w9tz6f0000rzpazn6bx3g4'
+  ],
+  userConnections: {
+    cm7xle1vr000nrzkv08juc6h6: 1,
+    cm7ytnyhc000wrzkv3rcnfy5p: 1,
+    cm7w9tz6f0000rzpazn6bx3g4: 1
+  }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"search_event","content":{"query":"e"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"ex"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"exe"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"exes"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"exesh"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"exeshj"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"exeshja"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"exeshj"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"exesh"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"exeshk"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"exeshka"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Z"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7ytnyhc000wrzkv3rcnfy5p',
+  username: 'Zettaisha'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"z"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Z"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"ZE"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Z"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Ze"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zer"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zert"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zer"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Ze"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zet"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zett"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zetta"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zettai"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zettais"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zettaish"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Zettaisha"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Z"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"e"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"F"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"D"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"E"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":""}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Remaining connections after disconnect: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7ytnyhc000wrzkv3rcnfy5p' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7ytnyhc000wrzkv3rcnfy5p: 1 }
+}
+→ GET /api/user/me 200 5ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 3,
+  connectedUsers: [
+    'cm7xle1vr000nrzkv08juc6h6',
+    'cm7ytnyhc000wrzkv3rcnfy5p',
+    'cm7w9tz6f0000rzpazn6bx3g4'
+  ],
+  userConnections: {
+    cm7xle1vr000nrzkv08juc6h6: 1,
+    cm7ytnyhc000wrzkv3rcnfy5p: 1,
+    cm7w9tz6f0000rzpazn6bx3g4: 1
+  }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":0}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: get_chat_detail
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":0}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: get_chat_detail
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":0}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: get_chat_detail
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","page":0}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: get_chat_detail
+Remaining connections after disconnect: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7xle1vr000nrzkv08juc6h6', 'cm7ytnyhc000wrzkv3rcnfy5p' ],
+  userConnections: { cm7xle1vr000nrzkv08juc6h6: 1, cm7ytnyhc000wrzkv3rcnfy5p: 1 }
+}
+→ GET /api/user/me 200 23ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 3,
+  connectedUsers: [
+    'cm7xle1vr000nrzkv08juc6h6',
+    'cm7ytnyhc000wrzkv3rcnfy5p',
+    'cm7w9tz6f0000rzpazn6bx3g4'
+  ],
+  userConnections: {
+    cm7xle1vr000nrzkv08juc6h6: 1,
+    cm7ytnyhc000wrzkv3rcnfy5p: 1,
+    cm7w9tz6f0000rzpazn6bx3g4: 1
+  }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"search_event","content":{"query":"Z"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Received message: {"type":"search_event","content":{"query":"Ze"}}
+Processing message: {
+  type: 'search_event',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Unknown message type: search_event
+Terminated
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +23ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebsocketModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+Static files path: /root/vsmessanger/uploads
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +25ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/register, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/user}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/check, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/upload-image, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/me, GET} route[39m[38;5;3m +1ms[39m
+WebSocket server started on ws://localhost:8080/ws
+[32m[Nest] 48126  - [39m03/07/2025, 7:09:13 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +63ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +25ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebsocketModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+Static files path: /root/vsmessanger/uploads
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +26ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/register, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/user}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/check, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/upload-image, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/me, GET} route[39m[38;5;3m +1ms[39m
+WebSocket server started on ws://localhost:8080/ws
+[32m[Nest] 50556  - [39m03/07/2025, 7:52:00 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +63ms[39m
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+→ GET /api/user/me 200 18ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","page":1}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +22ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebsocketModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+Static files path: /root/vsmessanger/uploads
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +26ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/user}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/check, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/upload-image, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/me, GET} route[39m[38;5;3m +1ms[39m
+WebSocket server started on ws://localhost:8080/ws
+[32m[Nest] 50633  - [39m03/07/2025, 7:52:43 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +63ms[39m
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
