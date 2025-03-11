@@ -21,6 +21,7 @@ interface ExtendedMessageContent extends MessageContent {
     page?: number;
     limit?: number;
     message_ids?: string[];
+    message_id?: string | null;
     query?: string;
 }
 
@@ -197,16 +198,16 @@ export class WebsocketGateway implements OnModuleInit, OnModuleDestroy {
                         return;
                     }
                     const chatId = getMsgContent.chat_id;
-                    const page = getMsgContent.page || 1;
+                    const lastMessageId = getMsgContent.message_id || null;
                     const limit = getMsgContent.limit || 30;
 
-                    // Проверяем валидность параметров пагинации
-                    if (page < 1 || limit < 1 || limit > 100) {
-                        this.sendError(ws, 'Invalid pagination parameters');
+                    // Проверяем валидность параметров
+                    if (limit < 1 || limit > 100) {
+                        this.sendError(ws, 'Invalid limit parameter');
                         return;
                     }
 
-                    await this.websocketService.getChatMessages(chatId, userId, page, limit);
+                    await this.websocketService.getChatMessages(chatId, userId, lastMessageId, limit, ws);
                     break;
 
                 case 'update_messages_status':

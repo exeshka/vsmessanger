@@ -248,8 +248,7 @@ export interface GetMessagesContent {
 export interface MessagesListContent {
     messages: MessageData[];
     pagination: {
-        total: number;
-        page: number;
+        lastMessageId: string | null;
         limit: number;
         hasMore: boolean;
     };
