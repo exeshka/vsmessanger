@@ -4389,3 +4389,1961 @@ Active connections: {
   userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
 }
 Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +23ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebsocketModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+Static files path: /root/vsmessanger/uploads
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +24ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/register, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/user}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/check, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/upload-image, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/me, GET} route[39m[38;5;3m +1ms[39m
+WebSocket server started on ws://localhost:8080/ws
+[32m[Nest] 44333  - [39m03/11/2025, 3:37:16 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +65ms[39m
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+→ GET /api/user/me 200 6ms from ::ffff:193.108.116.107
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7yqw98q000vrzkvrckzwlnc","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7yqw98q000vrzkvrckzwlnc"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7yqw98q000vrzkvrckzwlnc","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7yqw98q000vrzkvrckzwlnc"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +22ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebsocketModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+Static files path: /root/vsmessanger/uploads
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +23ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/user}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/check, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/upload-image, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/me, GET} route[39m[38;5;3m +0ms[39m
+WebSocket server started on ws://localhost:8080/ws
+[32m[Nest] 44924  - [39m03/11/2025, 3:40:05 PM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +62ms[39m
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+→ GET /api/user/me 200 14ms from ::ffff:193.108.116.107
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 2 }
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"send_message","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","text":"Писька","type":"TEXT"}}
+Processing message: {
+  type: 'send_message',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Handling send message: {
+  message: {
+    type: 'send_message',
+    content: {
+      chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c',
+      text: 'Писька',
+      type: 'TEXT'
+    }
+  },
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4'
+}
+Sending to chat: {
+  fromUserId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  chatId: 'cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c'
+}
+Prepared server message: { type: 'send_message', content: { text: 'Писька', type: 'TEXT' } }
+Message sent successfully: {
+  chat_id: 'cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c',
+  message_id: 'cm84s3q7p0000rznw1q08mwps',
+  text: 'Писька',
+  type: 'TEXT',
+  status: 'SENT',
+  from: {
+    id: 'cm7w9tz6f0000rzpazn6bx3g4',
+    username: 'exe',
+    createdAt: 2025-03-05T18:48:39.256Z,
+    updatedAt: 2025-03-11T17:41:08.946Z,
+    is_online: false,
+    last_online: 2025-03-11T17:41:08.946Z,
+    images: [ [Object] ]
+  },
+  timestamp: '2025-03-11T17:42:16.693Z'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7ytnyhc000wrzkv3rcnfy5p","lastMessageId":"cm84knlix0006rz4q4frfxa4y"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w9tz6f0000rzpazn6bx3g4-cm7zjbi400001rzkqb5eqw49c","lastMessageId":"cm7zv5fto0004rzkqzlh2k1so"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w9tz6f0000rzpazn6bx3g4',
+  username: 'exe'
+}
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+→ GET /api/user/check?nickname=exeshka 200 4ms from ::ffff:2.134.108.226
+Connection error: JsonWebTokenError: invalid signature
+    at /root/vsmessanger/node_modules/jsonwebtoken/verify.js:171:19
+    at getSecret (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/root/vsmessanger/node_modules/jsonwebtoken/verify.js:101:10)
+    at JwtService.verify (/root/vsmessanger/node_modules/@nestjs/jwt/dist/jwt.service.js:67:20)
+    at WebsocketGateway.authenticateConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:116:47)
+    at WebsocketGateway.handleConnection (/root/vsmessanger/src/websocket/websocket.gateway.ts:91:53)
+    at WebSocketServer.emit (node:events:518:28)
+    at WebSocketServer.completeUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:436:5)
+    at WebSocketServer.handleUpgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:344:10)
+    at Server.upgrade (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:119:16)
+→ POST /api/auth/login 201 82ms from ::ffff:2.134.108.226
+→ GET /api/user/me 200 4ms from ::ffff:2.134.108.226
+Active connections: {
+  totalUsers: 2,
+  connectedUsers: [ 'cm7w9tz6f0000rzpazn6bx3g4', 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w9tz6f0000rzpazn6bx3g4: 1, cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm80irlta000arzbv3775dg6a"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm80iri5g0009rzbvrcdpy7ym"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm80irg1a0008rzbvvns65xhz"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm80irdbc0007rzbv8i7wxvm9"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm80iragl0006rzbv92nxuhqp"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm80ir74f0005rzbv1op1cgi1"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm80ir2o10004rzbvvguazoet"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm80iqxws0003rzbvbsrdqijm"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z3opcb0030rzrafmf9f5ou"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z3oktj002zrzrailpc3iyu"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z3ohwk002yrzragv95euhq"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z3oej6002xrzra3qxi959h"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2y8h9002wrzras4wljlly"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2xwiu002vrzraknpe59cn"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2xsue002urzrarf9icmca"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2rikd002trzrai356wz6t"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2rcei002srzratq9v0omf"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2qz73002rrzra7z545sgz"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2qxxm002qrzrasgu6tdi5"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2qvpz002przranowj03dp"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2itnz002orzrab2s18wbl"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2isfk002nrzrar79hax23"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2ipng002mrzra7vh7xriz"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2inf7002lrzrauf2b4hcw"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2ikfs002krzraof3acwj2"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2iiby002jrzrabqflbsvx"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z25qix002irzra4jlms70a"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z25c2u002hrzrat6hbn8un"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z25aqt002grzraidv3z9zm"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"update_messages_status","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","message_ids":["cm7z2qvpz002przranowj03dp"]}}
+Processing message: {
+  type: 'update_messages_status',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Remaining connections after disconnect: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+→ GET /api/user/me 200 2ms from ::ffff:2.134.108.226
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm80iru48000brzbvcnpiujh2"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm80iru48000brzbvcnpiujh2"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm80iru48000brzbvcnpiujh2"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Remaining connections after disconnect: { totalUsers: 0, connectedUsers: [], userConnections: {} }
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 1 }
+}
+→ GET /api/user/me 200 2ms from ::ffff:2.134.108.226
+Received message: {"type":"get_chats","content":{}}
+Processing message: {
+  type: 'get_chats',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":null}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_chat_detail","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4"}}
+Processing message: {
+  type: 'get_chat_detail',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {"type":"get_messages","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","lastMessageId":"cm7z25aqt002grzraidv3z9zm"}}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Active connections: {
+  totalUsers: 1,
+  connectedUsers: [ 'cm7w79afq0000lwbwsn0j9vdx' ],
+  userConnections: { cm7w79afq0000lwbwsn0j9vdx: 2 }
+}
+Received message: {
+    "type": "get_messages",
+    "content": {
+        "chat_id": "cm84byl6q0000lw634btz5mtq-cm84bz0k10001lw63lzwrc3bi",
+        "lastMessageId": "cm7z25aqt002grzraidv3z9zm"
+    }
+}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
+Received message: {
+    "type": "get_messages",
+    "content": {
+        "chat_id": "cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4",
+        "lastMessageId": "cm7z25aqt002grzraidv3z9zm"
+    }
+}
+Processing message: {
+  type: 'get_messages',
+  userId: 'cm7w79afq0000lwbwsn0j9vdx',
+  username: 'exeshka'
+}
