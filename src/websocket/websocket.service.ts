@@ -844,22 +844,19 @@ export class WebsocketService {
         }
     }
 
-    async getChatMessages(chatId: string, userId: string, page: number = 1, limit: number = 30): Promise<void> {
-        const connections = this.getConnections(userId);
+    async getChatMessages(chatId: string, userId: string, lastMessageId: string | null = null, limit: number = 30, ws: WebSocket): Promise<void> {
         const requestId = uuidv4();
 
         try {
-            // Отправляем состояние загрузки
+            // Отправляем состояние загрузки только на запросивший сокет
             const loadingMessage: StateResponse<'get_messages'> = {
                 type: 'get_messages_loading',
                 content: { requestId }
             };
 
-            connections.forEach(({ ws }) => {
-                if (ws.readyState === WebSocket.OPEN) {
-                    ws.send(JSON.stringify(loadingMessage));
-                }
-            });
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify(loadingMessage));
+            }
 
             // Проверяем, есть ли у пользователя доступ к чату
             const chat = await this.prisma.chat.findFirst({
@@ -880,38 +877,41 @@ export class WebsocketService {
                     content: {
                         messages: [],
                         pagination: {
-                            total: 0,
-                            page: page,
+                            lastMessageId: null,
                             limit: limit,
                             hasMore: false
                         }
                     }
                 };
 
-                connections.forEach(({ ws }) => {
-                    if (ws.readyState === WebSocket.OPEN) {
-                        ws.send(JSON.stringify(emptyResponse));
-                    }
-                });
+                if (ws.readyState === WebSocket.OPEN) {
+                    ws.send(JSON.stringify(emptyResponse));
+                }
                 return;
             }
 
-            // Получаем общее количество сообщений в чате
-            const totalMessages = await this.prisma.message.count({
-                where: {
-                    chatId: chat.id
+            // Формируем условие для поиска сообщений
+            const whereCondition: any = {
+                chatId: chat.id
+            };
+
+            // Если указан lastMessageId, добавляем условие для курсор-пагинации
+            if (lastMessageId) {
+                const lastMessage = await this.prisma.message.findUnique({
+                    where: { id: lastMessageId },
+                    select: { createdAt: true }
+                });
+
+                if (lastMessage) {
+                    whereCondition.createdAt = {
+                        lt: lastMessage.createdAt // Получаем сообщения, созданные раньше последнего
+                    };
                 }
-            });
+            }
 
-            // Вычисляем параметры пагинации
-            const skip = (page - 1) * limit;
-            const hasMore = totalMessages > skip + limit;
-
-            // Получаем сообщения для текущей страницы
+            // Получаем сообщения
             const messages = await this.prisma.message.findMany({
-                where: {
-                    chatId: chat.id
-                },
+                where: whereCondition,
                 include: {
                     sender: {
                         select: {
@@ -919,6 +919,8 @@ export class WebsocketService {
                             username: true,
                             createdAt: true,
                             updatedAt: true,
+                            is_online: true,
+                            last_online: true,
                             images: true
                         }
                     }
@@ -926,12 +928,15 @@ export class WebsocketService {
                 orderBy: {
                     createdAt: 'desc'
                 },
-                skip,
-                take: limit
+                take: limit + 1 // Берем на одно сообщение больше, чтобы проверить наличие следующей страницы
             });
 
+            // Проверяем, есть ли еще сообщения
+            const hasMore = messages.length > limit;
+            const messagesToSend = messages.slice(0, limit); // Убираем дополнительное сообщение из результата
+
             // Формируем сообщения
-            const messagesList = messages.map(message => this.createMessageData(message));
+            const messagesList = messagesToSend.map(message => this.createMessageData(message));
 
             // Отправляем успешный результат
             const successMessage: ServerResponse<MessagesListContent> = {
@@ -939,41 +944,35 @@ export class WebsocketService {
                 content: {
                     messages: messagesList,
                     pagination: {
-                        total: totalMessages,
-                        page,
+                        lastMessageId: messagesToSend[messagesToSend.length - 1]?.id || null,
                         limit,
                         hasMore
                     }
                 }
             };
 
-            connections.forEach(({ ws }) => {
-                if (ws.readyState === WebSocket.OPEN) {
-                    ws.send(JSON.stringify(successMessage));
-                }
-            });
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify(successMessage));
+            }
         } catch (error) {
             console.error('Error getting chat messages:', error);
 
-            // В случае любой ошибки также отправляем пустой список
+            // В случае ошибки отправляем пустой список
             const emptyResponse: ServerResponse<MessagesListContent> = {
                 type: 'get_messages_success',
                 content: {
                     messages: [],
                     pagination: {
-                        total: 0,
-                        page: page,
+                        lastMessageId: null,
                         limit: limit,
                         hasMore: false
                     }
                 }
             };
 
-            connections.forEach(({ ws }) => {
-                if (ws.readyState === WebSocket.OPEN) {
-                    ws.send(JSON.stringify(emptyResponse));
-                }
-            });
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify(emptyResponse));
+            }
         }
     }
 
@@ -1426,22 +1425,42 @@ export class WebsocketService {
                 }
             });
 
-            // Оповещаем всех пользователей об изменении статуса
-            const updatedUser = await this.getUserInfo(userId);
-            if (updatedUser) {
-                const statusUpdate: ServerResponse<{ user: UserInfo }> = {
-                    type: 'user_status_updated',
-                    content: { user: updatedUser }
-                };
-
-                // Отправляем обновление всем подключенным пользователям
-                this.connections.forEach((connections) => {
-                    connections.forEach(({ ws }) => {
-                        if (ws.readyState === WebSocket.OPEN) {
-                            ws.send(JSON.stringify(statusUpdate));
+            // Получаем чаты пользователя
+            const chats = await this.prisma.chat.findMany({
+                where: {
+                    members: {
+                        some: { id: userId }
+                    }
+                },
+                include: {
+                    members: {
+                        select: {
+                            id: true
                         }
-                    });
-                });
+                    }
+                }
+            });
+
+            // Оповещаем только участников чатов
+            for (const chat of chats) {
+                for (const member of chat.members) {
+                    if (member.id !== userId) { // Не отправляем уведомление самому пользователю
+                        const connections = this.getConnections(member.id);
+                        const updatedUser = await this.getUserInfo(userId);
+                        if (updatedUser) {
+                            const statusUpdate: ServerResponse<{ user: UserInfo }> = {
+                                type: 'user_status_updated',
+                                content: { user: updatedUser }
+                            };
+
+                            connections.forEach(({ ws }) => {
+                                if (ws.readyState === WebSocket.OPEN) {
+                                    ws.send(JSON.stringify(statusUpdate));
+                                }
+                            });
+                        }
+                    }
+                }
             }
         } catch (error) {
             console.error('Error updating user online status:', error);
@@ -1458,22 +1477,42 @@ export class WebsocketService {
                 }
             });
 
-            // Оповещаем всех пользователей об изменении статуса
-            const updatedUser = await this.getUserInfo(userId);
-            if (updatedUser) {
-                const statusUpdate: ServerResponse<{ user: UserInfo }> = {
-                    type: 'user_status_updated',
-                    content: { user: updatedUser }
-                };
-
-                // Отправляем обновление всем подключенным пользователям
-                this.connections.forEach((connections) => {
-                    connections.forEach(({ ws }) => {
-                        if (ws.readyState === WebSocket.OPEN) {
-                            ws.send(JSON.stringify(statusUpdate));
+            // Получаем чаты пользователя
+            const chats = await this.prisma.chat.findMany({
+                where: {
+                    members: {
+                        some: { id: userId }
+                    }
+                },
+                include: {
+                    members: {
+                        select: {
+                            id: true
                         }
-                    });
-                });
+                    }
+                }
+            });
+
+            // Оповещаем только участников чатов
+            for (const chat of chats) {
+                for (const member of chat.members) {
+                    if (member.id !== userId) { // Не отправляем уведомление самому пользователю
+                        const connections = this.getConnections(member.id);
+                        const updatedUser = await this.getUserInfo(userId);
+                        if (updatedUser) {
+                            const statusUpdate: ServerResponse<{ user: UserInfo }> = {
+                                type: 'user_status_updated',
+                                content: { user: updatedUser }
+                            };
+
+                            connections.forEach(({ ws }) => {
+                                if (ws.readyState === WebSocket.OPEN) {
+                                    ws.send(JSON.stringify(statusUpdate));
+                                }
+                            });
+                        }
+                    }
+                }
             }
         } catch (error) {
             console.error('Error updating user offline status:', error);
