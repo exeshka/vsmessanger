@@ -22,6 +22,7 @@ interface ExtendedMessageContent extends MessageContent {
     limit?: number;
     message_ids?: string[];
     message_id?: string | null;
+    lastMessageId?: string | null;
     query?: string;
 }
 
@@ -198,7 +199,7 @@ export class WebsocketGateway implements OnModuleInit, OnModuleDestroy {
                         return;
                     }
                     const chatId = getMsgContent.chat_id;
-                    const lastMessageId = getMsgContent.message_id || null;
+                    const lastMessageId = getMsgContent.lastMessageId || null;
                     const limit = getMsgContent.limit || 30;
 
                     // Проверяем валидность параметров

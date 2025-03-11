@@ -884,8 +884,8 @@ export class WebsocketService {
                 return;
             }
 
-            // Строим базовый запрос
-            const baseQuery = {
+            // Строим базовый запрос с условием для чата
+            const baseQuery: Prisma.MessageWhereInput = {
                 chatId: chat.id
             };
 
