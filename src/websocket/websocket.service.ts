@@ -891,17 +891,11 @@ export class WebsocketService {
 
             // Если есть lastMessageId, добавляем условие для получения более старых сообщений
             if (lastMessageId) {
-                const referenceMessage = await this.prisma.message.findUnique({
-                    where: { id: lastMessageId }
+                Object.assign(baseQuery, {
+                    id: {
+                        lt: lastMessageId
+                    }
                 });
-
-                if (referenceMessage) {
-                    Object.assign(baseQuery, {
-                        createdAt: {
-                            lt: referenceMessage.createdAt
-                        }
-                    });
-                }
             }
 
             console.log('Executing query with conditions:', JSON.stringify(baseQuery, null, 2));
@@ -922,7 +916,7 @@ export class WebsocketService {
                     }
                 },
                 orderBy: {
-                    createdAt: Prisma.SortOrder.desc
+                    id: Prisma.SortOrder.desc
                 },
                 take: limit + 1
             });
@@ -931,8 +925,7 @@ export class WebsocketService {
                 totalMessages: messages.length,
                 firstMessageId: messages[0]?.id,
                 lastMessageId: messages[messages.length - 1]?.id,
-                firstMessageTime: messages[0]?.createdAt,
-                lastMessageTime: messages[messages.length - 1]?.createdAt
+                messageIds: messages.map(m => m.id)
             });
 
             const hasMore = messages.length > limit;
