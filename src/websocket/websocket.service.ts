@@ -29,6 +29,7 @@ import {
 } from './interfaces/socket-message.interface';
 import { v4 as uuidv4 } from 'uuid';
 import { PrismaService } from '../prisma/prisma.service';
+import { Prisma } from '@prisma/client';
 
 interface Connection {
     ws: WebSocket;
@@ -845,18 +846,13 @@ export class WebsocketService {
     }
 
     async getChatMessages(chatId: string, userId: string, lastMessageId: string | null = null, limit: number = 30, ws: WebSocket): Promise<void> {
-        const requestId = uuidv4();
-
         try {
-            // Отправляем состояние загрузки только на запросивший сокет
-            const loadingMessage: StateResponse<'get_messages'> = {
-                type: 'get_messages_loading',
-                content: { requestId }
-            };
-
-            if (ws.readyState === WebSocket.OPEN) {
-                ws.send(JSON.stringify(loadingMessage));
-            }
+            console.log('Received request with params:', {
+                chatId,
+                userId,
+                lastMessageId,
+                limit
+            });
 
             // Проверяем, есть ли у пользователя доступ к чату
             const chat = await this.prisma.chat.findFirst({
@@ -870,7 +866,6 @@ export class WebsocketService {
                 }
             });
 
-            // Если чат не найден, отправляем пустой список
             if (!chat) {
                 const emptyResponse: ServerResponse<MessagesListContent> = {
                     type: 'get_messages_success',
@@ -878,40 +873,33 @@ export class WebsocketService {
                         messages: [],
                         pagination: {
                             lastMessageId: null,
-                            limit: limit,
+                            limit,
                             hasMore: false
                         }
                     }
                 };
-
                 if (ws.readyState === WebSocket.OPEN) {
                     ws.send(JSON.stringify(emptyResponse));
                 }
                 return;
             }
 
-            // Формируем условие для поиска сообщений
-            const whereCondition: any = {
+            // Build the base query
+            const baseQuery = {
                 chatId: chat.id
             };
 
-            // Если указан lastMessageId, добавляем условие для курсор-пагинации
+            // Add lastMessageId condition if provided
             if (lastMessageId) {
-                const lastMessage = await this.prisma.message.findUnique({
-                    where: { id: lastMessageId },
-                    select: { createdAt: true }
+                Object.assign(baseQuery, {
+                    id: {
+                        lt: lastMessageId
+                    }
                 });
-
-                if (lastMessage) {
-                    whereCondition.createdAt = {
-                        lt: lastMessage.createdAt // Получаем сообщения, созданные раньше последнего
-                    };
-                }
             }
 
-            // Получаем сообщения
-            const messages = await this.prisma.message.findMany({
-                where: whereCondition,
+            const query = {
+                where: baseQuery,
                 include: {
                     sender: {
                         select: {
@@ -926,19 +914,33 @@ export class WebsocketService {
                     }
                 },
                 orderBy: {
-                    createdAt: 'desc'
+                    id: Prisma.SortOrder.desc
                 },
-                take: limit + 1 // Берем на одно сообщение больше, чтобы проверить наличие следующей страницы
+                take: limit + 1
+            };
+
+            console.log('Executing query:', JSON.stringify(query, null, 2));
+
+            const messages = await this.prisma.message.findMany(query);
+
+            console.log('Query result:', {
+                totalMessages: messages.length,
+                firstMessageId: messages[0]?.id,
+                lastMessageId: messages[messages.length - 1]?.id,
+                messageIds: messages.map(m => m.id)
             });
 
-            // Проверяем, есть ли еще сообщения
             const hasMore = messages.length > limit;
-            const messagesToSend = messages.slice(0, limit); // Убираем дополнительное сообщение из результата
-
-            // Формируем сообщения
+            const messagesToSend = messages.slice(0, limit);
             const messagesList = messagesToSend.map(message => this.createMessageData(message));
 
-            // Отправляем успешный результат
+            console.log('Sending response:', {
+                totalMessagesToSend: messagesToSend.length,
+                firstMessageId: messagesToSend[0]?.id,
+                lastMessageId: messagesToSend[messagesToSend.length - 1]?.id,
+                hasMore
+            });
+
             const successMessage: ServerResponse<MessagesListContent> = {
                 type: 'get_messages_success',
                 content: {
@@ -956,22 +958,19 @@ export class WebsocketService {
             }
         } catch (error) {
             console.error('Error getting chat messages:', error);
-
-            // В случае ошибки отправляем пустой список
-            const emptyResponse: ServerResponse<MessagesListContent> = {
+            const errorResponse: ServerResponse<MessagesListContent> = {
                 type: 'get_messages_success',
                 content: {
                     messages: [],
                     pagination: {
                         lastMessageId: null,
-                        limit: limit,
+                        limit,
                         hasMore: false
                     }
                 }
             };
-
             if (ws.readyState === WebSocket.OPEN) {
-                ws.send(JSON.stringify(emptyResponse));
+                ws.send(JSON.stringify(errorResponse));
             }
         }
     }
@@ -997,6 +996,25 @@ export class WebsocketService {
                 throw new Error('Chat not found or access denied');
             }
 
+            // Проверяем, что сообщения не принадлежат текущему пользователю
+            const messages = await this.prisma.message.findMany({
+                where: {
+                    id: {
+                        in: messageIds
+                    },
+                    chatId: chatId
+                },
+                select: {
+                    id: true,
+                    senderId: true
+                }
+            });
+
+            const ownMessages = messages.filter(msg => msg.senderId === userId);
+            if (ownMessages.length > 0) {
+                throw new Error('Cannot mark your own messages as read');
+            }
+
             // Обновляем статус сообщений
             await this.prisma.message.updateMany({
                 where: {
@@ -1005,7 +1023,7 @@ export class WebsocketService {
                     },
                     chatId: chatId,
                     NOT: {
-                        senderId: userId // Не обновляем статус собственных сообщений
+                        senderId: userId
                     }
                 },
                 data: {
