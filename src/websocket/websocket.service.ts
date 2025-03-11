@@ -884,21 +884,29 @@ export class WebsocketService {
                 return;
             }
 
-            // Build the base query
+            // Строим базовый запрос
             const baseQuery = {
                 chatId: chat.id
             };
 
-            // Add lastMessageId condition if provided
+            // Если есть lastMessageId, добавляем условие для получения более старых сообщений
             if (lastMessageId) {
-                Object.assign(baseQuery, {
-                    id: {
-                        lt: lastMessageId
-                    }
+                const referenceMessage = await this.prisma.message.findUnique({
+                    where: { id: lastMessageId }
                 });
+
+                if (referenceMessage) {
+                    Object.assign(baseQuery, {
+                        createdAt: {
+                            lt: referenceMessage.createdAt
+                        }
+                    });
+                }
             }
 
-            const query = {
+            console.log('Executing query with conditions:', JSON.stringify(baseQuery, null, 2));
+
+            const messages = await this.prisma.message.findMany({
                 where: baseQuery,
                 include: {
                     sender: {
@@ -914,32 +922,22 @@ export class WebsocketService {
                     }
                 },
                 orderBy: {
-                    id: Prisma.SortOrder.desc
+                    createdAt: Prisma.SortOrder.desc
                 },
                 take: limit + 1
-            };
-
-            console.log('Executing query:', JSON.stringify(query, null, 2));
-
-            const messages = await this.prisma.message.findMany(query);
+            });
 
             console.log('Query result:', {
                 totalMessages: messages.length,
                 firstMessageId: messages[0]?.id,
                 lastMessageId: messages[messages.length - 1]?.id,
-                messageIds: messages.map(m => m.id)
+                firstMessageTime: messages[0]?.createdAt,
+                lastMessageTime: messages[messages.length - 1]?.createdAt
             });
 
             const hasMore = messages.length > limit;
             const messagesToSend = messages.slice(0, limit);
             const messagesList = messagesToSend.map(message => this.createMessageData(message));
-
-            console.log('Sending response:', {
-                totalMessagesToSend: messagesToSend.length,
-                firstMessageId: messagesToSend[0]?.id,
-                lastMessageId: messagesToSend[messagesToSend.length - 1]?.id,
-                hasMore
-            });
 
             const successMessage: ServerResponse<MessagesListContent> = {
                 type: 'get_messages_success',
