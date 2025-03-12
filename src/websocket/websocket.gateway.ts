@@ -24,6 +24,7 @@ interface ExtendedMessageContent extends MessageContent {
     message_id?: string | null;
     lastMessageId?: string | null;
     query?: string;
+    is_typing?: boolean;
 }
 
 interface ExtendedSocketMessage {
@@ -236,6 +237,21 @@ export class WebsocketGateway implements OnModuleInit, OnModuleDestroy {
                     }
                     await this.websocketService.searchByNickname(userId, searchContent.query);
                     break;
+
+
+                ///{"type":"send_typing","content":{"chat_id":"cm7w79afq0000lwbwsn0j9vdx-cm7w9tz6f0000rzpazn6bx3g4","is_typing":false}}
+                /// Received: {"type":"error","content":{"message":"chat_id and is_typing is required"}}
+
+                case 'send_typing':
+                    const sendTypingContent = (message as unknown as ExtendedSocketMessage).content;
+                    if (!sendTypingContent.chat_id || sendTypingContent.is_typing === undefined) {
+
+                        this.sendError(ws, 'chat_id and is_typing is required');
+                        return;
+                    }
+                    await this.websocketService.sendTyping(userId, sendTypingContent.chat_id, sendTypingContent.is_typing);
+                    break;
+
 
                 default:
                     console.warn('Unknown message type:', message.type);

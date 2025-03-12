@@ -102,6 +102,51 @@ export class WebsocketService {
         return this.connections;
     }
 
+    async sendTyping(userId: string, chatId: string, isTyping: boolean) {
+        const connections = this.getConnections(userId);
+
+        const existingChat = await this.prisma.chat.findUnique({
+            where: { id: chatId },
+            include: { members: true }
+        });
+
+        if (!existingChat) {
+            return;
+        }
+
+        // Получаем данные о пользователе
+        const user = await this.getUserInfo(userId);
+
+        if (!user) {
+            return;
+        }
+
+        // Отправляем событие всем участникам чата кроме юзера который пишет (со всех соединений)
+        const recipientIds = existingChat.members.map(member => member.id);
+
+
+
+
+
+        recipientIds.forEach(recipientId => {
+            const connections = this.getConnections(recipientId);
+            connections.forEach(({ ws }) => {
+                if (ws.readyState === WebSocket.OPEN) {
+                    if (recipientId !== userId) {
+                        ws.send(JSON.stringify({
+                            type: 'user_typing',
+                            content: {
+                                chat_id: chatId,
+                                is_typing: isTyping,
+                                user: user // Отправляем модельку пользователя
+                            }
+                        }));
+                    }
+                }
+            });
+        });
+    }
+
     async findOrCreateChat(userId1: string, userId2: string) {
         // Сортируем ID пользователей, чтобы меньший был первым
         const [smallerId, largerId] = [userId1, userId2].sort();

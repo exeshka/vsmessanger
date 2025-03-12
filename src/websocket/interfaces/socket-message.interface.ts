@@ -94,7 +94,8 @@ export type BaseMessageType =
     | 'update_messages_status'
     | 'search_event'
     | 'get_user'
-    | 'get_chat_detail';
+    | 'get_chat_detail'
+    | 'send_typing';
 
 export type MessageType =
     | BaseMessageType
