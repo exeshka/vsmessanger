@@ -6347,3 +6347,62 @@ Processing message: {
   userId: 'cm7w79afq0000lwbwsn0j9vdx',
   username: 'exeshka'
 }
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +22ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUserModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWebsocketModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +1ms[39m
+Static files path: /root/vsmessanger/uploads
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/auth}:[39m[38;5;3m +24ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/login, POST} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/auth/register, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUserController {/api/user}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/check, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/upload-image, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/user/me, GET} route[39m[38;5;3m +0ms[39m
+WebSocket server started on ws://localhost:8080/ws
+[32m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +75ms[39m
+WebSocket server error: Error: listen EADDRINUSE: address already in use :::8080
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at new WebSocketServer (/root/vsmessanger/node_modules/ws/lib/websocket-server.js:102:20)
+    at WebsocketGateway.onModuleInit (/root/vsmessanger/src/websocket/websocket.gateway.ts:50:24)
+    at MapIterator.iteratee (/root/vsmessanger/node_modules/@nestjs/core/hooks/on-module-init.hook.js:22:43)
+    at MapIterator.next (/root/vsmessanger/node_modules/iterare/src/map.ts:9:39)
+    at IteratorWithOperators.next (/root/vsmessanger/node_modules/iterare/src/iterate.ts:19:28)
+    at Function.from (<anonymous>)
+    at IteratorWithOperators.toArray (/root/vsmessanger/node_modules/iterare/src/iterate.ts:227:22) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 8080
+}
+[31m[Nest] 88359  - [39m03/12/2025, 9:34:08 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +16ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/root/vsmessanger/node_modules/@nestjs/platform-express/adapters/express-adapter.js:109:32)
+    at /root/vsmessanger/node_modules/@nestjs/core/nest-application.js:183:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/root/vsmessanger/node_modules/@nestjs/core/nest-application.js:173:16)
+    at async bootstrap (/root/vsmessanger/src/main.ts:29:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.3
